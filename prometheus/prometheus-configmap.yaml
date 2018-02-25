@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: simple-prom
+  labels:
+    prometheus: hello
+    role: prometheus-rulefiles
+  namespace: default
+data:
+  alerting.rules: |
+    # Alert if deployment missing
+    ALERT SimpleDeploymentMissing
+      IF kube_deployment_status_replicas{deployment="simple-deployment"} < 3
+      LABELS {severity="critical"}
+      ANNOTATIONS {description="Prometheus could not find the Simple Deployment"}

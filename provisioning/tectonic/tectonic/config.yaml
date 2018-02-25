@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: tectonic-config
+  namespace: tectonic-system
+data:
+  clusterID: "913b8697-f0d5-4edc-a9d1-26ed86e280d0"
+  clusterName: "vagrant"
+  installerPlatform: "sandbox-virtualbox-linux"
+  certificatesStrategy: "installerGeneratedCA"
+  consoleBaseAddress: "https://console.tectonicsandbox.com"
+  kubeAPIServerURL: "https://172.17.4.101:443"
+  tectonicVersion: "1.7.5-tectonic.1"
+  dexAPIHost: "tectonic-identity-api.tectonic-system.svc.cluster.local:5557"

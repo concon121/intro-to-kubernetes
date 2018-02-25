@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: hello
+  labels:
+    prometheus: hello
+  namespace: default
+spec:
+  replicas: 1
+  version: v1.7.1
+  serviceAccountName: prometheus-hello
+  serviceMonitorSelector:
+    matchLabels:
+      k8s-app: kube-state-metrics
+  ruleSelector:
+    matchLabels:
+      prometheus: hello
+  resources:
+    requests:
+      memory: 400Mi
+  alerting:
+    alertmanagers:
+      - namespace: tectonic-system
+        name: alertmanager-main
+        port: web

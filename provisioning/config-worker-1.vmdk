@@ -1,0 +1,21 @@
+# Disk DescriptorFile
+version=1
+CID=3ca2d4ea
+parentCID=ffffffff
+createType="fullDevice"
+
+# Extent description
+RW 3000 FLAT "config-worker-1.img" 0
+
+# The disk Data Base 
+#DDB
+
+ddb.virtualHWVersion = "4"
+ddb.adapterType="ide"
+ddb.geometry.cylinders="2"
+ddb.geometry.heads="16"
+ddb.geometry.sectors="63"
+ddb.uuid.image="4c80e838-bc31-46aa-9dee-c2853c332d57"
+ddb.uuid.parent="00000000-0000-0000-0000-000000000000"
+ddb.uuid.modification="00000000-0000-0000-0000-000000000000"
+ddb.uuid.parentmodification="00000000-0000-0000-0000-000000000000"
