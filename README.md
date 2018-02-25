@@ -1,4 +1,4 @@
-# Exta Quick Start
+# Extra Quick Start
 
 Original docs are here: https://coreos.com/tectonic/sandbox/
 
